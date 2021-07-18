@@ -16,6 +16,6 @@
         "webpack-virtual-modules": "^0.4.3"
     },
     "scripts": {
-        "start": "ts-node-dev examples/apiTest/main.ts"
+        "start": "ts-node-dev --quiet --watch 'src/**/*' examples/apiTest/main.ts"
     }
 }

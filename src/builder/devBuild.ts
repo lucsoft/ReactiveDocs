@@ -10,7 +10,7 @@ export function startDevBuild(options: Options, pages: Page[]) {
     pages;
 
     var virtualModules = new VirtualModulesPlugin({
-        'main.ts': `import {} from './src/template/default';`
+        'main.ts': `import { start } from './src/template/default'; start(JSON.parse('${JSON.stringify(options)}'))`
     });
 
     const compiler = webpack({
@@ -52,7 +52,7 @@ export function startDevBuild(options: Options, pages: Page[]) {
     const dev = new WebpackDevServer(compiler, {
         noInfo: true,
         after: () => {
-            console.log(`🏗  We are running ${options.PageTitle} on Port 6969`)
+            console.log(`🏗  We are running ${options.PageTitle} on port 6969`)
         }
     })
     dev.listen(6969);

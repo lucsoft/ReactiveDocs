@@ -1,5 +1,5 @@
 import { MDOS } from '../../src/index';
 
 MDOS({
-    PageTitle: "Offical MDOS Documentation"
+    PageTitle: "Offical MDOCS Documentation"
 })
