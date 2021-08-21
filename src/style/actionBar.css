@@ -1,0 +1,52 @@
+.action-bar {
+    background: var(--on-card-background);
+    font-size: 1.02rem;
+    color: var(--on-background-text);
+    font-weight: 400;
+    display: grid;
+    line-height: 1.5;
+    padding: 0 1rem;
+    grid-template-columns: 17rem auto max-content;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+.action-bar .logo-area {
+    display: flex;
+    padding-top: 0.2rem;
+    align-items: center;
+    border-right: 1.5px solid hsl(var(--highlight-hue), 40%, 97%);
+    gap: 1rem;
+}
+.action-bar .logo-area .m-icon {
+    display: block;
+    color: hsl(var(--highlight-hue), 96%, 95%);
+    line-height: 1;
+    font-size: 1.4rem;
+    padding: 0.45rem;
+    border-radius: 0.2rem;
+    background-color: hsl(var(--highlight-hue), 96%, 50%);
+}
+.action-bar .links-area {
+    display: flex;
+    padding-top: 0.2rem;
+    margin-left: 4rem;
+    gap: 2rem;
+}
+.action-bar a {
+    text-decoration: none;
+    color: var(--on-background-text);
+    transition: color 250ms ease;
+}
+.action-bar a:hover {
+    color: hsl(var(--highlight-hue), 96%, 50%);
+}
+.action-bar .links-area a {
+    color: hsl(var(--highlight-hue), 96%, 50%);
+}
+.action-bar .links-area a:hover {
+    color: hsl(var(--highlight-hue), 96%, 35%);
+}

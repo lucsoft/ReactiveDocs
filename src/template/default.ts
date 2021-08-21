@@ -1,12 +1,21 @@
 import { span, SupportedThemes, View, WebGen } from '@lucsoft/webgen';
 import { Options } from "../types/options";
+import { ActionBar } from "./components/actionBar";
 
-WebGen({
-    theme: SupportedThemes.white
-});
 
 export function start(options: Options) {
+    WebGen({
+        theme: SupportedThemes.white,
+        events: {
+            themeChanged: (_, style) => {
+                style.overrideTheme({
+                    [ "--highlight-hue" ]: options.HighlightHue.toString()
+                })
+            }
+        }
+    });
+
     View(({ draw }) => {
-        draw(span(options.PageTitle))
+        draw(ActionBar(options))
     }).appendOn(document.body)
 }
